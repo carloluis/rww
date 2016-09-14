@@ -1,0 +1,20 @@
+{
+  "name": "rww",
+  "version": "1.0.0",
+  "description": "webpack learning",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carloluis/rww.git"
+  },
+  "keywords": ["react", "webpack"],
+  "author": "carloluis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carloluis/rww/issues"
+  },
+  "homepage": "https://github.com/carloluis/rww#readme"
+}

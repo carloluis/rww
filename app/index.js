@@ -14,7 +14,7 @@ Hello.defaultProps = {
 };
 
 ReactDOM.render(
-	<Hello />, 
+	<Hello message="Hello RWW" />, 
 	document.getElementById('root')
 );
 

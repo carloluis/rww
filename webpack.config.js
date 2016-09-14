@@ -28,12 +28,18 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader', query: { presets: ['react', 'es2015'] } }
+            { 
+            	test: /\.js$/, 
+            	exclude: /node_modules/, 
+            	loader: 'babel-loader', 
+            	query: { 
+            		presets: ['react', 'es2015'] },
+            		cacheDirectory: true
+            	}
         ]
     },
     plugins: [HTMLWebpackPluginConfig, EnvPluginConfig],
     devtool: '#source-map',
-    //devtool: 'cheap-module-source-map',
     devServer: { inline: true },
     watch: true
 }

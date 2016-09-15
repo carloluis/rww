@@ -47,6 +47,12 @@ module.exports = {
     },
     plugins: [HTMLWebpackPluginConfig, EnvPluginConfig, UglifyJsPluginConfig],
     devtool: '#source-map',
-    devServer: { inline: true },
+    resolve: {
+        extensions: ['', '.js']
+    },
+    devServer: { 
+        inline: true,
+        port: 8082
+    },
     watch: true
 }

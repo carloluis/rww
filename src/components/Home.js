@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
 
-class Hello extends Component{
+class Home extends Component{
 	render(){
 		return <h1>{this.props.message}!</h1>
 	}
 }
-Hello.propTypes = {
+Home.propTypes = {
 	message: React.PropTypes.string
 };
-Hello.defaultProps = {
-	message: 'Hello World!'
+Home.defaultProps = {
+	message: 'Welcome Home!'
 };
 
-export default Hello;
+export default Home;

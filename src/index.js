@@ -1,8 +1,7 @@
-import React, { Component } from 'react'
+import routes from './config/routes'
 import ReactDOM from 'react-dom'
-import Hello from './hello'
 
 ReactDOM.render(
-	<Hello message="Hello RWW" />, 
+	routes, 
 	document.getElementById('root')
 );

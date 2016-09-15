@@ -25,6 +25,11 @@ var UglifyJsPluginConfig = new webpack.optimize.UglifyJsPlugin({
     comments: !production
 });
 
+let plugins = [HTMLWebpackPluginConfig, EnvPluginConfig];
+if (production){
+    plugins.push(UglifyJsPluginConfig);
+}
+
 module.exports = {
     entry: ['./src/index.js'],
     output: {
@@ -45,7 +50,7 @@ module.exports = {
             	}
         ]
     },
-    plugins: [HTMLWebpackPluginConfig, EnvPluginConfig, UglifyJsPluginConfig],
+    plugins: plugins,
     devtool: '#source-map',
     resolve: {
         extensions: ['', '.js']

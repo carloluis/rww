@@ -5,7 +5,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "js" : "babel src --watch --out-dir dist --source-maps",
+    "js": "babel src --watch --out-dir dist --source-maps",
     "start": "webpack-dev-server --content-base dist/ --inline --progress --colors",
     "production": "webpack -p"
   },
@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "react": "^15.3.1",
-    "react-dom": "^15.3.1"
+    "react-dom": "^15.3.1",
+    "react-router": "^2.8.1"
   }
 }

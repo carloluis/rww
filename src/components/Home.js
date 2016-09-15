@@ -1,15 +1,20 @@
 import React, { Component } from 'react'
+import ReactRouter, {Link} from 'react-router';
 
 class Home extends Component{
 	render(){
-		return <h1>{this.props.message}!</h1>
-	}
+        return (
+            <div className='jumbotron col-sm-12 text-center'>
+                <h1>Battle</h1>
+                <p className='lead'>Some fancy motto</p>
+                <Link to='/playerOne'>
+                    <button type='button' className='btn btn-lg btn-success'>
+                        Get Started
+                    </button>
+                </Link>
+            </div>
+        )
+    }
 }
-Home.propTypes = {
-	message: React.PropTypes.string
-};
-Home.defaultProps = {
-	message: 'Welcome Home!'
-};
 
 export default Home;

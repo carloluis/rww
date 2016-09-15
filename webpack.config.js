@@ -17,9 +17,16 @@ var EnvPluginConfig = new webpack.DefinePlugin({
         'NODE_ENV': JSON.stringify(NODE_ENV)
     }
 });
+var UglifyJsPluginConfig = new webpack.optimize.UglifyJsPlugin({
+    compress: { 
+    	warnings: !!production
+    },
+    mangle: !!production,
+    comments: !production
+});
 
 module.exports = {
-    entry: ['./app/index.js'],
+    entry: ['./src/index.js'],
     output: {
         path: __dirname + '/dist',
         publicPath: '/',
@@ -38,7 +45,7 @@ module.exports = {
             	}
         ]
     },
-    plugins: [HTMLWebpackPluginConfig, EnvPluginConfig],
+    plugins: [HTMLWebpackPluginConfig, EnvPluginConfig, UglifyJsPluginConfig],
     devtool: '#source-map',
     devServer: { inline: true },
     watch: true

@@ -5,6 +5,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "js" : "babel src/index.js --out-file dist/index.js",
     "start": "webpack-dev-server --content-base dist/ --inline --progress --colors",
     "production": "webpack -p"
   },

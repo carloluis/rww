@@ -4,7 +4,7 @@ import Main from '../components/Main';
 import Home from '../components/Home';
 import PromptContainer from '../containers/PromptContainer';
 
-var routes = (
+const routes = (
 	<Router history={hashHistory}>
 		<Route path='/' component={Main}>
 			<IndexRoute component={Home}/>

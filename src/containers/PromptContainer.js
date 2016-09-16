@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import Prompt from '../components/prompt';
+import React, {Component} from 'react'
+import Prompt from '../components/prompt'
 
 class PromptContainer extends Component{
     constructor(props, context){
@@ -31,7 +31,6 @@ class PromptContainer extends Component{
         this.setState({username: e.target.value});
     }
     render(){
-        //console.log(this);
         return (
             <Prompt 
                 onSubmitUser={this.handleSubmitUser}
@@ -43,6 +42,12 @@ class PromptContainer extends Component{
 }
 PromptContainer.contextTypes = {
     router: React.PropTypes.object.isRequired
+};
+PromptContainer.propTypes = {
+    route: React.PropTypes.object.isRequired,
+    routeParams: React.PropTypes.shape({
+      playerOne: React.PropTypes.string
+    })
 };
 
 export default PromptContainer;

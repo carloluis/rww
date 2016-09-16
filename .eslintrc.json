@@ -3,13 +3,13 @@
         "es6": true,
         "browser": true
     },
-    "ecmaFeatures": {
-        "jsx": true,
-        "experimentalObjectRestSpread": false,
-        "modules": true
-    },
+    "sourceType": "module",
     "rules" : {
-        "no-unused-vars" : 2,
+        "react/jsx-uses-react": "error",
+        "react/jsx-uses-vars": "error",
+        "no-irregular-whitespace": 2,
+        "no-multi-spaces": 2,
+        "no-unused-vars" : 1,
         "no-undef" : 2
     },
 	"parserOptions": {		
@@ -20,5 +20,15 @@
             "modules": true,
             "experimentalObjectRestSpread": false
         }
-	}
+	},
+    "plugins": ["react"], // https://github.com/yannickcr/eslint-plugin-react
+    //"extends": ["eslint:recommended", "plugin:react/recommended"],
+    "settings": {
+        "react": {
+            "prefer-es6-class": [true, "always"],
+            "createClass": "createClass", // Regex for Component Factory to use, default to "createClass"
+            "pragma": "React",  // Pragma to use, default to "React"
+            "version": "15.0" // React version, default to the latest React stable release
+        }
+    }
 }

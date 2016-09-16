@@ -38,7 +38,7 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                loader: 'jshint-loader'
+                loader: 'eslint'
             }
         ],
         loaders: [
@@ -58,6 +58,10 @@ module.exports = {
         extensions: ['', '.js']
     },
     devtool: '#source-map',
+    eslint: {
+        failOnWarning: false,
+        failOnError: true
+    },
     devServer: { 
         inline: true,
         port: 8082,

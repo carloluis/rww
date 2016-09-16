@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import ReactRouter, {Link} from 'react-router'
-import styles from '../styles/index'
+import React, { Component } from 'react';
+import ReactRouter, {Link} from 'react-router';
+import styles from '../styles/index';
 
 class Home extends Component{
 	render(){

@@ -1,5 +1,5 @@
-import React, {Component} from 'react'
-import Prompt from '../components/prompt'
+import React, {Component} from 'react';
+import Prompt from '../components/prompt';
 
 class PromptContainer extends Component{
     constructor(props, context){

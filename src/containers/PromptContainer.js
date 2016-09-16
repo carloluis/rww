@@ -24,7 +24,7 @@ class PromptContainer extends Component{
             });
         } else {
             //goto /player-two
-            this.context.router.push('/playerTwo/'+this.state.username);
+            this.context.router.push('/playerTwo/'+username);
         }
     }
     handleUpdateUser(e){

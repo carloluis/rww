@@ -1,9 +1,9 @@
 {
 	"env": {
         "es6": true,
-        "browser": true
+        "browser": true,
+        "node": true
     },
-    "sourceType": "module",
     "rules" : {
         "react/jsx-uses-react": "error",
         "react/jsx-uses-vars": "error",

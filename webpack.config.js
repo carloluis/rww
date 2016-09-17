@@ -68,7 +68,8 @@ module.exports = {
         colors: true,
         progress: true,
         historyApiFallback: true,
-        contentBase: './dist'
+        contentBase: './dist',
+        open: true
     },
     watch: true
 }

@@ -5,4 +5,3 @@ ReactDOM.render(
 	routes, 
 	document.getElementById('root')
 );
-console.log('webpack-p');

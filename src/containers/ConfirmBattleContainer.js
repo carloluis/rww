@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ConfirmBattle from '../components/ConfirmBattle'
+import githubHelpers from '../utils/githubHelpers'
 
 class ConfirmBattleContainer extends Component {
 	constructor(props){
@@ -15,8 +16,17 @@ class ConfirmBattleContainer extends Component {
 	}
 	componentDidMount() {
 		var query = this.props.location.query;
-		// fetch info from github...
-		console.log('componentDidMount');
+		githubHelpers.getPlayersInfo([query.playerOne, query.playerTwo])
+			.then(function (players) {
+				//console.log('PLAYERS', players);
+				this.setState({
+					isLoading: false,
+					playerInfo: players
+				});
+			}.bind(this))
+			.catch(function (error) {
+				console.warn('Error in getPlayersInfo:', error);
+			});
 	}
 	componentWillReceiveProps(nextProps) {
 		console.log('componentWillReceiveProps');

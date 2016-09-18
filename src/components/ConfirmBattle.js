@@ -1,9 +1,11 @@
 import React from 'react';
 
+let puke = (object) => <pre>{JSON.stringify(object, null, ' ')}</pre>
+
 let ConfirmBattle = (props) => {
 	return props.isLoading === true
 		? <p> LOADING! </p>
-		: <p> CONFIRM BATTLE! </p>;
+		: <div> CONFIRM BATTLE!: {puke(props)}</div>;
 };
 
 ConfirmBattle.propTypes = {

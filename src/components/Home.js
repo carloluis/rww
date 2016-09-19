@@ -14,7 +14,7 @@ class Home extends Component{
                     </button>
                 </Link>
             </div>
-        )
+        );
     }
 }
 Home.displayName='Home';

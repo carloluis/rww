@@ -10,7 +10,8 @@ let UserDetailsWrapper = (props) => {
 };
 
 UserDetailsWrapper.propTypes = {
-	children: React.PropTypes.element
+	children: React.PropTypes.element,
+	header: React.PropTypes.string
 };
 
 export default UserDetailsWrapper;

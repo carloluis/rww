@@ -10,7 +10,7 @@ let UserDetails = (user) => {
 			{user.info.location && <li className='list-group-item'>Location: {user.info.location}</li>}
 			{user.info.company && <li className='list-group-item'>Company: {user.info.company}</li>}
 			<li className='list-group-item'>Followers: {user.info.followers}</li>
-			<li className='list-group-item'>Follogin: {user.info.following}</li>
+			<li className='list-group-item'>Following: {user.info.following}</li>
 			<li className='list-group-item'>Public Repos: {user.info.public_repos}</li>
 			{user.info.blog && <li className='list-group-item'>Blog: <a href={user.info.blog}>{user.info.blog}</a></li>}
 		</div>

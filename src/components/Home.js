@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import {Link} from 'react-router';
-import styles from '../styles/index';
+import React, { Component } from 'react'
+import {Link} from 'react-router'
+import MainContainer from './MainContainer'
 
 class Home extends Component{
 	render(){
         return (
-            <div className='jumbotron col-sm-12 text-center' style={styles.transparentBg}>
+            <MainContainer>
                 <h1>Battle</h1>
                 <p className='lead'>Some fancy motto</p>
                 <Link to='/playerOne'>
@@ -13,7 +13,7 @@ class Home extends Component{
                         Get Started
                     </button>
                 </Link>
-            </div>
+            </MainContainer>
         );
     }
 }

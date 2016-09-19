@@ -1,8 +1,9 @@
 import React from 'react'
-import UserDetails from '../components/UserDetails'
-import UserDetailsWrapper from '../components/UserDetailsWrapper'
+import UserDetails from './UserDetails'
+import UserDetailsWrapper from './UserDetailsWrapper'
 import {Link} from 'react-router'
 import styles from '../styles/index'
+import MainContainer from './MainContainer'
 
 let puke = (object) => <pre>{JSON.stringify(object, null, ' ')}</pre>
 
@@ -21,16 +22,16 @@ let Results = (props) => {
 
 	if(props.scores[0] === props.scores[1]){
 		return (
-			<div className='jumbotron col-sm-12 text-center'>
+			<MainContainer>
 				<h1>It's a tie!</h1>
 				<StartOver />
-			</div>
+			</MainContainer>
 		);
 	}
 
 	let [winningIndex, losingIndex] = props.scores[0] > props.scores[1]? [0, 1]: [1, 0];
 	return (
-		<div className='jumbotron col-sm-12 text-center'>
+		<MainContainer>
 			<h1>Results</h1>
 			<div className='col-sm-8 col-sm-offset-2'>
 				<UserDetailsWrapper header='Winner'>
@@ -41,7 +42,7 @@ let Results = (props) => {
 				</UserDetailsWrapper>
 			</div>
 			<StartOver />
-		</div>
+		</MainContainer>
 	);
 };
 

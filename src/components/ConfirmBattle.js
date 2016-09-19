@@ -1,15 +1,16 @@
-import React from 'react';
-import {Link} from 'react-router';
-import styles from '../styles/index';
-import UserDetails from '../components/UserDetails';
-import UserDetailsWrapper from '../components/UserDetailsWrapper';
+import React from 'react'
+import {Link} from 'react-router'
+import styles from '../styles/index'
+import UserDetails from '../components/UserDetails'
+import UserDetailsWrapper from '../components/UserDetailsWrapper'
+import MainContainer from './MainContainer'
 
 let puke = (object) => <pre>{JSON.stringify(object, null, ' ')}</pre>
 
 let ConfirmBattle = (props) => {
 	return props.isLoading === true
 		? <p> LOADING! </p>
-		: <div className="jumbotron col-sm-12 text-center">
+		: <MainContainer>
 			<h1>Cofirm Players</h1>
 			<div className="col-sm-8 col-sm-offset-2">
 				<UserDetailsWrapper header='Player One'>
@@ -31,7 +32,7 @@ let ConfirmBattle = (props) => {
 					</Link>
 				</div>
 			</div>
-		</div>;
+		</MainContainer>
 };
 
 ConfirmBattle.propTypes = {

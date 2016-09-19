@@ -5,7 +5,7 @@ import {Link} from 'react-router'
 import styles from '../styles/index'
 import MainContainer from './MainContainer'
 
-let puke = (object) => <pre>{JSON.stringify(object, null, ' ')}</pre>
+//let puke = (object) => <pre>{JSON.stringify(object, null, ' ')}</pre>
 
 let StartOver = () => (
 	<div className='col-sm-12' style={styles.space}>

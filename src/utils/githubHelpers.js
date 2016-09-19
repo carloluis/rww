@@ -18,7 +18,6 @@ function getTotalStars(repos) {
 }
 
 function getPlayersData(player) {
-	console.log('getPlayersData.player:',player);
 	return getRepos(player.login)
 		.then(getTotalStars)
 		.then((totalStars) => ({ 
@@ -29,10 +28,7 @@ function getPlayersData(player) {
 }
 
 function calculateScores(players) {
-	return [
-		players[0].followers*3 + players[0].totalStars + players[0].repos,
-		players[1].followers*3 + players[1].totalStars + players[1].repos
-	];
+	return players.map(player => player.followers*3 + player.totalStars + player.repos);
 }
 
 let helpers = {

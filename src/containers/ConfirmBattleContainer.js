@@ -48,7 +48,9 @@ ConfirmBattleContainer.contextTypes = {
 	router: React.PropTypes.object.isRequired
 };
 ConfirmBattleContainer.propTypes = {
-	location: React.PropTypes.any
+	location: React.PropTypes.shape({
+		query: React.PropTypes.object
+	})
 }
 
 export default ConfirmBattleContainer;

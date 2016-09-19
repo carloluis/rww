@@ -5,7 +5,7 @@ import UserDetails from '../components/UserDetails'
 import UserDetailsWrapper from '../components/UserDetailsWrapper'
 import MainContainer from './MainContainer'
 
-let puke = (object) => <pre>{JSON.stringify(object, null, ' ')}</pre>
+//let puke = (object) => <pre>{JSON.stringify(object, null, ' ')}</pre>
 
 let ConfirmBattle = (props) => {
 	return props.isLoading === true

@@ -29,7 +29,7 @@ class ConfirmBattleContainer extends Component {
 		this.context.router.push({
 			pathname: '/results',
 			state: {
-				playersInfo: this.state.playerInfo
+				playersInfo: this.state.playersInfo
 			}
 		})
 	}

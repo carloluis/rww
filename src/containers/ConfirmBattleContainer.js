@@ -7,38 +7,38 @@ class ConfirmBattleContainer extends Component {
 		super(props);
 		this.state = {
 			isLoading: true,
-			playerInfo: []
+			playersInfo: []
 		};
-		console.log('constructor')
-	}
-	componentWillMount() {
-		console.log('componentWillMount');
+		
+		this.handleInitiateBattle = this.handleInitiateBattle.bind(this);
 	}
 	componentDidMount() {
 		var query = this.props.location.query;
 		githubHelpers.getPlayersInfo([query.playerOne, query.playerTwo])
 			.then(function (players) {
-				//console.log('PLAYERS', players);
 				this.setState({
 					isLoading: false,
-					playerInfo: players
+					playersInfo: [players[0], players[1]]
 				});
 			}.bind(this))
 			.catch(function (error) {
 				console.warn('Error in getPlayersInfo:', error);
 			});
 	}
-	componentWillReceiveProps(nextProps) {
-		console.log('componentWillReceiveProps');
-	}
-	componentWillUnmount() {
-		console.log('componentWillUnmount');
+	handleInitiateBattle(){
+		this.context.router.push({
+			pathname: '/results',
+			state: {
+				playersInfo: this.state.playerInfo
+			}
+		})
 	}
 	render() {
 		return (
 			<ConfirmBattle 
 				isLoading={this.state.isLoading}
-				playerInfo={this.state.playerInfo}
+				onInitiateBattle={this.handleInitiateBattle}
+				playersInfo={this.state.playersInfo}
 			/>
 		);
 	}

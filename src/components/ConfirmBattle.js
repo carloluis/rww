@@ -4,12 +4,13 @@ import styles from '../styles/index'
 import UserDetails from '../components/UserDetails'
 import UserDetailsWrapper from '../components/UserDetailsWrapper'
 import MainContainer from './MainContainer'
+import Loading from './Loading'
 
 //let puke = (object) => <pre>{JSON.stringify(object, null, ' ')}</pre>
 
 let ConfirmBattle = (props) => {
 	return props.isLoading === true
-		? <p> LOADING! </p>
+		? <Loading />
 		: <MainContainer>
 			<h1>Cofirm Players</h1>
 			<div className="col-sm-8 col-sm-offset-2">

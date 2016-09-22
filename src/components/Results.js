@@ -4,6 +4,7 @@ import UserDetailsWrapper from './UserDetailsWrapper'
 import {Link} from 'react-router'
 import styles from '../styles/index'
 import MainContainer from './MainContainer'
+import Loading from './Loading'
 
 //let puke = (object) => <pre>{JSON.stringify(object, null, ' ')}</pre>
 
@@ -26,7 +27,7 @@ let Tie = (props) => {
 
 let Results = (props) => {
 	if(props.isLoading){
-		return (<p> Loading... </p>);
+		return <Loading />
 	}
 
 	if(props.scores[0] === props.scores[1]){

@@ -6,8 +6,8 @@ class Home extends Component{
 	render(){
         return (
             <MainContainer>
-                <h1>Battle</h1>
-                <p className='lead'>Some fancy motto</p>
+                <h1>Github Battle</h1>
+                <p className='lead'>What even is jQuery?</p>
                 <Link to='/playerOne'>
                     <button type='button' className='btn btn-lg btn-success'>
                         Get Started

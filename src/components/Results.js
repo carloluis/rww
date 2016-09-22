@@ -27,7 +27,7 @@ let Tie = (props) => {
 
 let Results = (props) => {
 	if(props.isLoading){
-		return <Loading />
+		return <Loading text='One Moment' speed={200} />
 	}
 
 	if(props.scores[0] === props.scores[1]){

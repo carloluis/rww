@@ -10,7 +10,7 @@ import Loading from './Loading'
 
 let ConfirmBattle = (props) => {
 	return props.isLoading === true
-		? <Loading />
+		? <Loading text='Waiting' speed={500} />
 		: <MainContainer>
 			<h1>Cofirm Players</h1>
 			<div className="col-sm-8 col-sm-offset-2">

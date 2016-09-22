@@ -20,22 +20,21 @@ let styles = {
 class Loading extends React.Component{
 	constructor(props){
 		super(props);
-		this.originalText = 'Loading';
 		this.state = {
-			text: this.originalText
+			text: this.props.text
 		};
 	}
 	componentDidMount(){
-		var stopper = `${this.originalText}...`;
+		var stopper = `${this.props.text}...`;
 		this.interval = setInterval(()=>{
 			if(this.state.text === stopper){
-				this.setState({text: this.originalText});
+				this.setState({ text: this.props.text });
 			} else{
 				this.setState({
 					text: this.state.text + '.'
 				});
 			}
-		}, 300);
+		}, this.props.speed);
 	}
 	componentWillUnmount(){
 		clearInterval(this.interval);
@@ -47,6 +46,15 @@ class Loading extends React.Component{
 			</div>
 		)
 	}
+}
+
+Loading.propTypes = {
+	text: React.PropTypes.string,
+	speed: React.PropTypes.number
+}
+Loading.defaultProps = {
+	text: 'Loading',
+	speed: 300
 }
 
 export default Loading;

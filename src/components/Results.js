@@ -15,18 +15,22 @@ let StartOver = () => (
 	</div>
 );
 
+let Tie = (props) => {
+	return (
+		<MainContainer>
+			<h1>It's a tie!</h1>
+			<StartOver />
+		</MainContainer>
+	)
+};
+
 let Results = (props) => {
 	if(props.isLoading){
-		return (<p> LOADING... </p>);
+		return (<p> Loading... </p>);
 	}
 
 	if(props.scores[0] === props.scores[1]){
-		return (
-			<MainContainer>
-				<h1>It's a tie!</h1>
-				<StartOver />
-			</MainContainer>
-		);
+		return <Tie scores={props.scores} playersInfo={props.playersInfo} />
 	}
 
 	let [winningIndex, losingIndex] = props.scores[0] > props.scores[1]? [0, 1]: [1, 0];

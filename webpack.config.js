@@ -50,7 +50,8 @@ module.exports = {
             		presets: ['react', 'es2015']
                 },
         		cacheDirectory: true
-        	}
+        	},
+            { test: /\.css$/, loader: 'style-loader!css-loader' }
         ]
     },
     plugins: [HTMLWebpackPluginConfig, EnvPluginConfig, CopyWebpackPluginConfig],

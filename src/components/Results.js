@@ -42,7 +42,7 @@ let Results = (props) => {
 				<UserDetailsWrapper header='Winner'>
 					<UserDetails score={props.scores[winningIndex]} info={props.playersInfo[winningIndex]} />
 				</UserDetailsWrapper>
-				<UserDetailsWrapper header='Looser'>
+				<UserDetailsWrapper header='Loser'>
 					<UserDetails score={props.scores[losingIndex]} info={props.playersInfo[losingIndex]} />
 				</UserDetailsWrapper>
 			</div>
